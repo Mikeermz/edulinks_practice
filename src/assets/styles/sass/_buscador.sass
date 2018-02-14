@@ -9,7 +9,7 @@
         margin-bottom: 1.6rem
         margin-top: 0
         font-weight: bold
-    > p 
+    > p
         margin-bottom: 3rem
         margin-left: auto
         margin-right: auto
@@ -25,17 +25,13 @@
         text-align: center
         text-decoration: underline
         transition: all .4s ease
-        &:hover 
+        &:hover
             opacity: .5
 
 
     .widgetBuscador
-    /*************GENERALES*************/
         position: relative
-        
-    /*************END - GENERALES*************/
 
-    /*************TABS DE NAVEGACION*************/
     .nav-tabs
         display: flex
         border: none
@@ -62,24 +58,24 @@
 
         li.active
             >a
-                background: $acuaBlue 
+                background: $acuaBlue
                 color: white
-                border: none 
-        span 
+                border: none
+        span
             display: none
     @media screen and (min-width: 768px)
         >li
             >a
                 padding: 2px 5px
-    /*************END - TABS DE NAVEGACION*************/    
+    /*************END - TABS DE NAVEGACION*************/
 
-    /*************CONTENIDO TABS*************/  
+    /*************CONTENIDO TABS*************/
     .tab-content
         padding: 10px 15px
         z-index: 999
         padding-bottom: 0
-        
-        label 
+
+        label
             font-weight: 600
             color: #fac5a0
 
@@ -87,11 +83,11 @@
             //margin-bottom: 20px
             .positionInitial
                 position: initial
-                
+
         input
             &::placeholder
                 color: $generalFontColor
-    
+
         .inputsection
             align-items: stretch
             border-radius: 6px
@@ -115,7 +111,7 @@
                 margin-bottom: 0
                 left: 0
                 position: absolute
-                
+
             >div
                 display: flex
                 flex-direction: column
@@ -147,14 +143,14 @@
                 padding-right: 18px
                 padding-left: 18px
                 transition: all 1s ease
-                &:hover 
+                &:hover
                     background: $acuaBlue
                     color: white
             .submit
                 position: relative
                 flex-grow: 1
                 margin-bottom: 0
-                
+
                 .fa
                     color: white
                     font-size: 30px
@@ -166,7 +162,7 @@
                     width: 24px
                     line-height: 19px
 
-            .fa    
+            .fa
                 bottom: 0
                 border-top: 0
                 color: #727176
@@ -177,10 +173,10 @@
                 top: 0
                 transform: translateY(30%)
                 z-index: 10
-                
+
         .radiobuttons
             display: flex
-            
+
             label
                 margin-right: 25px
 
@@ -190,10 +186,10 @@
             margin-top: auto
         .radio, .checkbox
             margin-top: 0
-        
+
         .tab-pane
-            position: relative    
-    
+            position: relative
+
             .inputsectionSecun
                 align-items: flex-start
                 margin-top: 25px
@@ -230,15 +226,15 @@
                                 height: auto
                                 padding-bottom: 6px
                                 padding-top: 6px
-        
-       
+
+
     @media screen and (min-width:768px)
         .widgetBuscador
             margin: 0 auto
             width: 750px
             h2
                 display: none
-            
+
             .nav-tabs
                 border-top: 0
                 justify-content: center
@@ -255,16 +251,16 @@
                     &.active
                         a
                             color: white
-                    
-                span 
+
+                span
                     display: inline
-                
+
                 .fa
                     margin-right: 10px
-                    
+
             .tab-content
                 border-radius: 0 8px 8px 8px
-                
+
                 .inputsection
                     align-items: flex-end
                     flex-direction: row
@@ -283,12 +279,12 @@
                         align-items: center
                         display: flex
                         flex-direction: row
-                        .limpiar 
+                        .limpiar
                             margin-top: 0
                             margin-left: .5rem
 
                     .errorValidation
-                        margin-bottom: 0         
+                        margin-bottom: 0
                 .filtrosAvanzados
                     flex-direction: row
                     margin-top: 22px
@@ -299,7 +295,7 @@
                     div
                         margin-right: 15px
                         margin-bottom: 0
-            
+
     @media screen and (min-width: 1200px)
         .widgetBuscador
             width: 1170px
