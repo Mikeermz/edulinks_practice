@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Mikeermz/edulinks_practice/issues"
   },
-  "homepage": "https://github.com/Mikeermz/edulinks_practice#readme"
+  "homepage": "https://github.com/Mikeermz/edulinks_practice#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
 }
