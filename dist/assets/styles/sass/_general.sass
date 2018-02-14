@@ -1,0 +1,146 @@
+html, body
+    font-size: 16px
+    font-family: Arial, Helvetica, sans-serif
+
+img
+    width: 100%
+
+.navPrincipal
+    background-color: white
+    border: none
+    border-bottom: 1px solid $lightGrey
+    box-shadow: 0px 5px 14px -1px rgba(0,0,0,0.2)
+    position: fixed
+    z-index: 200
+    width: 100%
+
+    .navbar-brand
+        height: auto
+        img
+            width: 8rem
+    @media screen and (min-width: 768px)
+        border-bottom: none
+        .navbar-nav
+            display: flex
+            width: 70%
+            > li
+                flex-grow: 1
+                width: 1%
+                > a
+                    font-size: 14px
+                    text-align: center
+        .container-fluid
+            align-items: center
+            display: flex
+            justify-content: space-between
+        .navbar-brand
+            height: auto
+            img
+                width: 12rem
+
+.headerPrincipal
+    align-items: center
+    background-image: url('../../img/background_header.jpg')
+    background-size: cover
+    background-position: center
+    border-bottom: 18px solid $lightAcua
+    color: $darkAcua
+    display: flex
+    height: 70vh
+    position: relative
+    margin-bottom: 2rem
+    &::after
+        content: ""
+        background: $whiteGradient
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+    .row
+        width: 100%
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 24%,rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)
+        padding-left: 1rem
+
+        .textoSup
+            font-size: 1.2rem
+            margin: 0
+            margin-bottom: .4rem
+            margin-top: 3rem
+            position: relative
+            z-index: 20
+        .textoInf
+            font-size: 3rem
+            font-weight: bold
+            margin: 0
+            position: relative
+            z-index: 20
+    @media screen and (min-width: 768px)
+        .row
+            width: 40%
+.footerPrincipal
+    border-top: 6px solid $acuaBlue
+    background: black
+    color: white
+    padding-top: 1.4rem
+    padding-bottom: 1.4rem
+    h2
+        font-size: 18px
+        margin-top: 0
+    .mapaSitio
+        display: none
+        nav
+            ul
+                > li
+                    list-style: none
+                    > a
+                        color: white
+                        font-size: 14px
+    .redesSociales
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        h2
+            text-align: center
+            margin-bottom: 2rem
+
+
+        .contRedes
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            a
+                width: 50px
+                margin-left: .3rem
+                margin-right: .3rem
+
+        .logo_educacion
+            align-items: flex-start
+            display: flex
+            margin-top: 40px
+            width: 100px
+    .legales
+        p
+            font-size: 14px
+            margin-bottom: 3rem
+        .chat
+            border: none
+            background: $gradientBlue
+            padding: .2rem 20%
+            transition: all 1s ease
+            width: 100%
+            &:hover
+                opacity: .9
+
+
+    @media screen and (min-width: 992px)
+        .mapaSitio
+            display: block
+
+        .redesSociales
+            .contRedes
+                flex-wrap: nowrap
+
+        .legales
+            .chat
+                width: 60%

@@ -2,10 +2,10 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var htmlmin = require('gulp-htmlmin');
 
-gulp.task('minify', function() {
+gulp.task('minify', () => {
   return gulp.src('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'));
+    				 .pipe(htmlmin({collapseWhitespace: true}))
+    				 .pipe(gulp.dest('dist'));
 });
 
 gulp.task('sass', () => {
@@ -17,3 +17,8 @@ gulp.task('sass', () => {
 gulp.task('default', () => {
   gulp.watch('src/assets/styles/sass/**', ['sass'])
 })
+
+gulp.task('copy', () => {
+  return gulp.src(['src/assets/**/*', '!src/assets/styles/sass/'])
+        		 .pipe(gulp.dest('dist/assets/'))
+});

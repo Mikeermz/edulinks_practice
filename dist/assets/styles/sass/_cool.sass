@@ -1,0 +1,37 @@
+.cool
+    .texto
+        h2
+            margin-bottom: 2rem
+            text-align: center
+        
+    @media screen and (min-width: 768px)
+        display: flex
+        margin-bottom: 1rem
+        .texto
+            flex-grow: 1
+            h2 
+                margin-top: 5rem
+            ul 
+                list-style: none
+                margin: 0 auto
+                width: 45%
+                li
+                    font-size: .85rem
+                    position: relative
+                    margin-bottom: 2rem
+                    &:before 
+                        border-left: 1px solid #00a5ae
+                        border-right: 1px solid #a4f6fb
+                        content: ""
+                        height: 22px
+                        left: -1.7rem
+                        position: absolute
+                        width: 22px
+                    h4 
+                        font-weight: bold
+        figure 
+            flex-grow: 1
+    @media screen and (min-width: 992px)
+        .texto
+            ul 
+                width: 65%
