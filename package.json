@@ -1,0 +1,19 @@
+{
+  "name": "edulinks",
+  "version": "1.0.0",
+  "description": "It's only practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mikeermz/edulinks_practice.git"
+  },
+  "author": "Mikee Rmz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikeermz/edulinks_practice/issues"
+  },
+  "homepage": "https://github.com/Mikeermz/edulinks_practice#readme"
+}
