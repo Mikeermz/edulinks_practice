@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Mikeermz/edulinks_practice#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-sass": "^3.1.0"
   }
