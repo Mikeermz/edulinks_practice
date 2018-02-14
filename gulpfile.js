@@ -16,16 +16,25 @@ gulp.task('sass', () => {
     				 .pipe(gulp.dest('src/assets/styles/css'))
 })
 
-gulp.task('default', () => {
+gulp.task('sass:watch', () => {
   gulp.watch('src/assets/styles/sass/**', ['sass'])
 })
 
-gulp.task('copy', () => {
-  return gulp.src(['src/assets/**/*', '!src/assets/styles/sass/'])
+gulp.task('copy_css', () => {
+  return gulp.src(['src/assets/**/*', '!src/assets/styles/sass/**'])
         		 .pipe(gulp.dest('dist/assets/'))
+	return gulp.src('src/js/**')
+        		 .pipe(gulp.dest('dist/js/'))
+})
+
+gulp.task('copy_js', () => {
+	return gulp.src('src/js/**')
+        		 .pipe(gulp.dest('dist/js/'))
 })
 
 gulp.task('clean', () => {
-  return gulp.src('dist/**', {read: false})
+  return gulp.src('dist/', {read: false})
         		 .pipe(clean());
 })
+
+gulp.task('default', ['sass', 'minify', 'copy_css', 'copy_js' ])
