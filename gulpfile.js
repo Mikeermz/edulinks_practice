@@ -21,10 +21,8 @@ gulp.task('sass:watch', () => {
 })
 
 gulp.task('copy_css', () => {
-  return gulp.src(['src/assets/**/*', '!src/assets/styles/sass/**'])
+  return gulp.src(['src/assets/**/*', '!src/assets/styles/sass', '!src/assets/styles/sass/**'])
         		 .pipe(gulp.dest('dist/assets/'))
-	return gulp.src('src/js/**')
-        		 .pipe(gulp.dest('dist/js/'))
 })
 
 gulp.task('copy_js', () => {
