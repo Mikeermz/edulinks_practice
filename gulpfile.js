@@ -3,7 +3,6 @@ var sass = require('gulp-sass')
 var htmlmin = require('gulp-htmlmin')
 var clean = require('gulp-clean')
 
-
 gulp.task('minify', () => {
   return gulp.src('src/*.html')
     				 .pipe(htmlmin({collapseWhitespace: true}))
@@ -20,19 +19,16 @@ gulp.task('sass:watch', () => {
   gulp.watch('src/assets/styles/sass/**', ['sass'])
 })
 
-gulp.task('copy_css', () => {
-  return gulp.src(['src/assets/**/*', '!src/assets/styles/sass', '!src/assets/styles/sass/**'])
-        		 .pipe(gulp.dest('dist/assets/'))
-})
-
-gulp.task('copy_js', () => {
-	return gulp.src('src/js/**')
-        		 .pipe(gulp.dest('dist/js/'))
+gulp.task('copy', () => {
+  return gulp.src(['src/**', '!src/assets/styles/sass', '!src/assets/styles/sass/**', '!src/*html'])
+        		 .pipe(gulp.dest('dist/'))
 })
 
 gulp.task('clean', () => {
-  return gulp.src('dist/', {read: false})
-        		 .pipe(clean());
+  setTimeout(() => {
+    return gulp.src('dist/', {read: false})
+          		 .pipe(clean());
+  }, 3000)
 })
 
-gulp.task('default', ['sass', 'minify', 'copy_css', 'copy_js' ])
+gulp.task('default', ['sass', 'minify', 'copy'])
